@@ -37,7 +37,10 @@ test:
 
 about:
   home: https://github.com/makcedward/nlpaug
+  dev_url: https://github.com/makcedward/nlpaug
+  doc_url: https://github.com/makcedward/nlpaug/tree/master/docs
   license: MIT
+  license_family: MIT
   license_file: LICENSE
   summary: Natrual language processing data Augmentation library
   description: |
