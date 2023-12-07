@@ -21,15 +21,11 @@ requirements:
     - setuptools
     - wheel
   run:
-    - datasets >=1.8.0
+    - python
     - gdown >=4.0.0
-    - numpy >=1.16.2
-    - pandas
-    - python >=3.6
-    - pytorch >=1.2.0
+    - numpy
+    - pandas >=1.2.0
     - requests >=2.22.0
-    - sentencepiece
-    - transformers
 
 test:
   imports:
