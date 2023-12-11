@@ -10,24 +10,22 @@ source:
   sha256: dab68723994c6b4503f20f543dad80a1a2177791520115313a80a6d1167e69a4
 
 build:
-  noarch: python
-  number: 1
-  script: {{ PYTHON }} -m pip install . -vv
+  skip: true  # [py<36]
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-build-isolation --no-deps -vv
 
 requirements:
   host:
-    - python >=3.6
+    - python
     - pip
+    - setuptools
+    - wheel
   run:
-    - datasets >=1.8.0
+    - python
     - gdown >=4.0.0
     - numpy >=1.16.2
-    - pandas
-    - python >=3.6
-    - pytorch >=1.2.0
+    - pandas >=1.2.0
     - requests >=2.22.0
-    - sentencepiece
-    - transformers
 
 test:
   imports:
@@ -39,7 +37,10 @@ test:
 
 about:
   home: https://github.com/makcedward/nlpaug
+  dev_url: https://github.com/makcedward/nlpaug
+  doc_url: https://github.com/makcedward/nlpaug/tree/master/docs
   license: MIT
+  license_family: MIT
   license_file: LICENSE
   summary: Natrual language processing data Augmentation library
   description: |
